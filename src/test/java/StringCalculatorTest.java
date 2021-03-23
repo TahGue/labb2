@@ -18,7 +18,7 @@ class StringCalculatorTest {
         assertEquals(expected, actual);
     }
       @Test
-        @DisplayName("Return tow number from string")
+        @DisplayName("Return one number from string")
         void testAddOnenumbers(){
 
             StringCalculator calculator = new StringCalculator();
@@ -29,5 +29,18 @@ class StringCalculatorTest {
             actual = calculator.add(numbers);
             assertEquals(expected, actual);
 }
+    @Test
+    @DisplayName("Return tow number from string")
+    void testAddTownumbers(){
+
+        StringCalculator calculator = new StringCalculator();
+        String numbers = "1,2";
+        int actual = 0;
+        int expected = 3;
+
+        actual = calculator.add(numbers);
+        assertEquals(expected, actual);
+
+    }
 
 }
