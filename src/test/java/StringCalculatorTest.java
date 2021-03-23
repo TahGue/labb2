@@ -42,5 +42,18 @@ class StringCalculatorTest {
         assertEquals(expected, actual);
 
     }
+    @Test
+    @DisplayName("Return unknown number from string")
+    void testAddUnknownnumbers(){
+
+        StringCalculator calculator = new StringCalculator();
+        String numbers = "1,2,3,4";
+        int actual = 0;
+        int expected = 10;
+
+        actual = calculator.add(numbers);
+        assertEquals(expected, actual);
+
+    }
 
 }
