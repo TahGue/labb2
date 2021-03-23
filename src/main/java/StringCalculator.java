@@ -8,13 +8,13 @@ public class StringCalculator {
         if (numbers.isBlank())
                 return 0;
        else{
-                String [] array = null;
-                int research = 0;
-                array = numbers.split(",");
-            for (var numberarray:array) {
-               research += Integer.parseInt(numberarray);
+                String [] numbersArray = null;
+                int sumofnumber = 0;
+            numbersArray = numbers.split(",");
+            for (var numberarray:numbersArray) {
+               sumofnumber += Integer.parseInt(numberarray);
             }
-                return research;
+                return sumofnumber;
 
 
         }
