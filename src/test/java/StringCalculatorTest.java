@@ -55,5 +55,18 @@ class StringCalculatorTest {
         assertEquals(expected, actual);
 
     }
+    @Test
+    @DisplayName("Return  number from string with , and \n")
+    void testAddnnumberswithdelimeters(){
+
+        StringCalculator calculator = new StringCalculator();
+        String numbers = "1\n2,3";
+        int actual = 0;
+        int expected = 6;
+
+        actual = calculator.add(numbers);
+        assertEquals(expected, actual);
+
+    }
 
 }
