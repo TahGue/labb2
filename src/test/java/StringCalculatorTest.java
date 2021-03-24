@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 class StringCalculatorTest {
 
@@ -67,6 +67,19 @@ class StringCalculatorTest {
         actual = calculator.add(numbers);
         assertEquals(expected, actual);
 
+    }
+    @Test
+    @DisplayName("Negative numbers exeptions")
+    void testNegtiaveExeption(){
+        StringCalculator calculator = new StringCalculator();
+    String numbers = "-8,-12,12";
+
+
+    String actual = "-8,-12";
+
+        String expted = "negatives not allowed:[-8,-12]";
+
+        assertThatExceptionOfType(RuntimeException.class).isThrownBy(() -> calculator.add(numbers)).withMessage("negative numbers not allowed!:[-8, -12]");
     }
 
 
