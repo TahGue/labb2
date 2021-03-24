@@ -8,9 +8,13 @@ public class StringCalculator {
         if (numbers.isBlank())
                 return 0;
        else{
-                String [] numbersArray = null;
+           if(numbers.length()>1)
+           if (numbers.substring(0,2).equals("//"))
+            numbers = numbers.substring(4);
+
+           String [] numbersArray = numbers.split ("[\n,;]");
                 int sumofnumber = 0;
-            numbersArray = numbers.split("[\n,]");
+
             for (var numberarray:numbersArray) {
                sumofnumber += Integer.parseInt(numberarray);
             }

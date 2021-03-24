@@ -60,13 +60,14 @@ class StringCalculatorTest {
     void testAddnnumberswithdelimeters(){
 
         StringCalculator calculator = new StringCalculator();
-        String numbers = "1\n2,3";
+        String numbers = "//;\n1;2";
         int actual = 0;
-        int expected = 6;
+        int expected = 3;
 
         actual = calculator.add(numbers);
         assertEquals(expected, actual);
 
     }
+
 
 }
