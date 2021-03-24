@@ -16,10 +16,11 @@ public class StringCalculator {
             String[] numbersArray = numbers.split("[;\n,]");
 
             for (var numberarray : numbersArray) {
-                if (Integer.parseInt(numberarray) > 0)
+                if ((Integer.parseInt(numberarray) > 0 && Integer.parseInt(numberarray) <= 1000))
                     sumOfNumbers += Integer.parseInt(numberarray);
-                else
-                    negativeNumberList.add(numberarray);
+                else if ((Integer.parseInt(numberarray) < 0))
+
+                negativeNumberList.add(numberarray);
             }
             if (!negativeNumberList.isEmpty())
                 throw new RuntimeException("negative numbers not allowed!:" + negativeNumberList);

@@ -81,6 +81,18 @@ class StringCalculatorTest {
 
         assertThatExceptionOfType(RuntimeException.class).isThrownBy(() -> calculator.add(numbers)).withMessage("negative numbers not allowed!:[-8, -12]");
     }
+    @Test
+    @DisplayName("ignore numbers bigger then 1000")
+    void testNumbersAbove1000(){
+        StringCalculator calculator = new StringCalculator();
+        String numbers = "2,1001";
+        int actual = 0;
+        int expected = 2;
+        actual = calculator.add(numbers);
+        assertEquals(expected, actual);
+
+    }
+
 
 
 }
