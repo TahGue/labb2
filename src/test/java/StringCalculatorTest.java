@@ -91,6 +91,18 @@ class StringCalculatorTest {
         actual = calculator.add(numbers);
         assertEquals(expected, actual);
 
+    }@Test
+    @DisplayName("Return  number from string with delimiter")
+    void testAddnnumberswithdelimeters2(){
+
+        StringCalculator calculator = new StringCalculator();
+        String numbers = "//[***]\n1***2***3";
+        int actual = 0;
+        int expected = 6;
+
+        actual = calculator.add(numbers);
+        assertEquals(expected, actual);
+
     }
 
 
