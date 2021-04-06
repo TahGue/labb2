@@ -11,8 +11,14 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <version> 5.8.0-M1</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit</groupId>
+            <artifactId>junit-bom</artifactId>
+            <version>5.8.0-M1</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
